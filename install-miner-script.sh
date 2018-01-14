@@ -1,7 +1,43 @@
-git clone https://github.com/wattflare/claymore-zcash.git
+COIN_ENABLED="vot"
 
-#create .runminer config file
-echo "$HOME/miners/claymore-zcash/start.pool.wattflare.vot.sh" > ~/.runminer
+VOT_ADDR="t1ZKv84aTkcT1kvnMiY49oUgFS72Xm8jHae"
+ZCL_ADDR="GET_NEW_ADDRESS"
+ZEN_ADDR="GET_NEW_ADDRESS"
+HUSH_ADDR="GET_NEW_ADDRESS"
+
+VOT_POOL="pool.wattflare.com:8034"
+ZCL_POOL="pool.wattflare.com:3034"
+ZEN_POOL="pool.wattflare.com:4034"
+HUSH_POOL="pool.wattflare.com:7034"
+
+current_user=$USER
+current_dir=$PWD
+miners_dir="$HOME/wtf_miners"
+
+mkdir $miners_dir && cd $miners_dir 
+git clone https://github.com/wattflare/claymore-zcash.git
+cd $current_dir
+
+#create coin mining scripts
+
+echo "$miners_dir/claymore-zcash/zecminer64 -zpool $VOT_POOL  -zwal $VOT_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.vot.pool.wattflare.com.sh
+
+echo "$miners_dir/claymore-zcash/zecminer64 -zpool $ZCL_POOL  -zwal $ZCL_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.zcl.pool.wattflare.com.sh
+
+echo "$miners_dir/claymore-zcash/zecminer64 -zpool $ZEN_POOL  -zwal $ZEN_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.zen.pool.wattflare.com.sh
+
+echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.hush.pool.wattflare.com.sh
+
+#make mining scripts executable
+chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
+
+#create .runminer file
+echo "$miners_dir/mine.$COIN_ENABLED.pool.wattflare.com.sh" > $miners_dir/.runminer
+
+#make .runminer executsable
+chmod +x $miners_dir/.runminer 
 
 #setup miner as start-up service
-sudo su -c ./add-miner-service.sh
+sudo miners_dir=$miners_dir current_user=$current_user su -c "./add-miner-service.sh"
+
+sudo su -c "service runminer start"
