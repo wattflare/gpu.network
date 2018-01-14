@@ -22,5 +22,3 @@ echo "WantedBy=multi-user.target" >> /etc/systemd/system/runminer.service
 #enable runminer service
 systemctl enable runminer.service
 
-#launch runminer service
-service runminer start
