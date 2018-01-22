@@ -1,14 +1,16 @@
-COIN_ENABLED="vot"
+COIN_ENABLED="btcz"
 
 VOT_ADDR="t1ZKv84aTkcT1kvnMiY49oUgFS72Xm8jHae"
 ZCL_ADDR="GET_NEW_ADDRESS"
 ZEN_ADDR="GET_NEW_ADDRESS"
 HUSH_ADDR="GET_NEW_ADDRESS"
+BTCZ_ADDR="t1W5ULSiaj6ZtFH8UmfPcQCtvP7dvv9VhaH"
 
 VOT_POOL="pool.wattflare.com:8034"
 ZCL_POOL="pool.wattflare.com:3034"
 ZEN_POOL="pool.wattflare.com:4034"
 HUSH_POOL="pool.wattflare.com:7034"
+BTCZ_POOL="bitcoinz.miningpool.io:5034"
 
 current_user=$USER
 current_dir=$PWD
@@ -27,6 +29,8 @@ echo "$miners_dir/claymore-zcash/zecminer64 -zpool $ZCL_POOL  -zwal $ZCL_ADDR.$H
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $ZEN_POOL  -zwal $ZEN_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.zen.pool.wattflare.com.sh
 
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.hush.pool.wattflare.com.sh
+
+echo "$miners_dir/claymore-zcash/zecminer64 -zpool $BTCZ_POOL  -zwal $BTCZ_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.btcz.pool.wattflare.com.sh
 
 #make mining scripts executable
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
