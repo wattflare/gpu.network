@@ -40,4 +40,8 @@ chmod +x $miners_dir/.runminer
 #setup miner as start-up service
 sudo miners_dir=$miners_dir current_user=$current_user su -c "./add-miner-service.sh"
 
+echo "Starting runminer service..."
+
 sudo su -c "service runminer start"
+
+echo "Started runminer service, type `screen -r miner` to view miner activity"
