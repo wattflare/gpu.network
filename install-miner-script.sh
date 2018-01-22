@@ -48,4 +48,4 @@ echo "Starting runminer service..."
 
 sudo su -c "service runminer start"
 
-echo "Started runminer service, type `screen -r miner` to view miner activity"
+echo "Started runminer service, type \"screen -r miner\" to view miner activity"
