@@ -11,3 +11,5 @@ wget https://github.com/wattflare/install-miners/releases/download/AMD-SDK/AMD-A
 && sudo ./AMD-APP-SDK-v3.0.130.136-GA-linux64.sh
 
 sudo usermod -a -G video $LOGNAME
+
+sudo reboot
