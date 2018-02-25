@@ -44,8 +44,11 @@ chmod +x $miners_dir/.runminer
 #setup miner as start-up service
 sudo miners_dir=$miners_dir current_user=$current_user su -c "./add-miner-service.sh"
 
-echo "Starting runminer service..."
+## Enable this when amd drivers doesn't need restart. And disable reboot below
+#echo "Starting runminer service..."
+#sudo su -c "service runminer start"
+echo "Congratutaions! wattflare AMD miners installation was sucessfull!"
+echo "Rebooting rig... Mining will start automatically. After reboot type \"screen -r miner\" to view miner activity"
+sudo sleep 5
+sudo reboot
 
-sudo su -c "service runminer start"
-
-echo "Started runminer service, type \"screen -r miner\" to view miner activity"
