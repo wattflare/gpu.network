@@ -12,4 +12,3 @@ wget https://github.com/wattflare/install-miners/releases/download/AMD-SDK/AMD-A
 
 sudo usermod -a -G video $LOGNAME
 
-sudo reboot
