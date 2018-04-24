@@ -6,11 +6,11 @@ ZEN_ADDR=${ZEN_ADDR:-"GET_NEW_ADDRESS"}
 HUSH_ADDR=${HUSH_ADDR:-"t1WvpdsV5HZjdNuzLhngeS6ecfGjut94c3u"}
 BTCZ_ADDR=${BTCZ_ADDR:-"t1Yc53Y7Sm96bxdmV9yC2tgEQNaHDC6T4SD"}
 
-VOT_POOL="pool.wattflare.com:8034"
-ZCL_POOL="pool.wattflare.com:3034"
-ZEN_POOL="pool.wattflare.com:4034"
-HUSH_POOL="pool.wattflare.com:7034"
-BTCZ_POOL="bitcoinz.miningpool.io:5034"
+VOT_POOL="165.227.12.162:8034"
+ZCL_POOL="165.227.12.162:3034"
+ZEN_POOL="165.227.12.162:4034"
+HUSH_POOL="165.227.12.162:7034"
+BTCZ_POOL="165.227.12.162:5034"
 
 current_user=$USER
 current_dir=$PWD
