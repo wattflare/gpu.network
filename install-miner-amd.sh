@@ -25,6 +25,10 @@ miners_dir="$HOME/wtf_miners"
 
 mkdir $miners_dir && cd $miners_dir 
 git clone https://github.com/wattflare/claymore-zcash.git
+
+#libcurl.so.4 needed for claymore
+sudo apt update
+sudo apt install libcurl4-openssl-dev -y
 git clone https://github.com/wattflare/claymore-eth.git
 cd $current_dir
 
