@@ -42,8 +42,8 @@ echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $BTCZ_POOL  -zwal $BTCZ_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.btcz.pool.wattflare.com.sh
 
 #ethash
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $MUSIC_POOL  -ewal $MUSIC_ADDR -epsw x" > $miners_dir/mine.music.pool.wattflare.com.sh -allpools 1
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETH_POOL  -ewal $ETH_ADDR -epsw x" > $miners_dir/mine.eth.pool.wattflare.com.sh
+echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $MUSIC_POOL -eworker $HOSTNAME -ewal $MUSIC_ADDR -epsw x" > $miners_dir/mine.music.pool.wattflare.com.sh -allpools 1
+echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETH_POOL -eworker $HOSTNAME -ewal $ETH_ADDR -epsw x" > $miners_dir/mine.eth.pool.wattflare.com.sh
 
 #make mining scripts executable
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
