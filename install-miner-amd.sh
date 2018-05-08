@@ -25,7 +25,7 @@ miners_dir="$HOME/wtf_miners"
 
 mkdir $miners_dir && cd $miners_dir 
 git clone https://github.com/wattflare/claymore-zcash.git
-git clone https://github.com/wattflare/clamore-eth.git
+git clone https://github.com/wattflare/claymore-eth.git
 cd $current_dir
 
 #create coin mining scripts
