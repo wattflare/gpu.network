@@ -53,7 +53,11 @@ echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETH_POOL -eworker $HOSTNAME
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
 
 #create .runminer file
-echo "$miners_dir/mine.$COIN_ENABLED.pool.wattflare.com.sh" > $miners_dir/.runminer
+echo "export GPU_MAX_HEAP_SIZE=100" > $miners_dir/.runminer
+echo "export GPU_USE_SYNC_OBJECTS=1" >> $miners_dir/.runminer
+echo "export GPU_MAX_ALLOC_PERCENT=100" >> $miners_dir/.runminer
+echo "export GPU_SINGLE_ALLOC_PERCENT=100" >> $miners_dir/.runminer
+echo "$miners_dir/mine.$COIN_ENABLED.pool.wattflare.com.sh" >> $miners_dir/.runminer
 
 #make .runminer executsable
 chmod +x $miners_dir/.runminer 
