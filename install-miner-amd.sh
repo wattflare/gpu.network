@@ -17,7 +17,7 @@ HUSH_POOL="165.227.12.162:7034"
 BTCZ_POOL="165.227.12.162:5034"
 #ethash
 MUSIC_POOL="stratum+tcp://music.gpu.network:8008"
-ETH_POOL="stratum+tcp://music.gpu.network:9009"
+ETH_POOL="stratum+tcp://eth.gpu.network:9009"
 
 current_user=$USER
 current_dir=$PWD
