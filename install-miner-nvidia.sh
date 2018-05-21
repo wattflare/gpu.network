@@ -19,7 +19,7 @@ BTCZ_POOL="bitcoinz.miningpool.io"
 
 #ethash
 MUSIC_POOL="stratum+tcp://music.gpu.network:8008"
-ETH_POOL="stratum+tcp://music.gpu.network:9009"
+ETH_POOL="stratum+tcp://eth.gpu.network:9009"
 
 VOT_POOL_PORT="8034"
 ZCL_POOL_PORT="3034"
