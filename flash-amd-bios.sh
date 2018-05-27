@@ -2,9 +2,11 @@ wget https://github.com/d13g0s0uz4/atiflash/releases/download/0.1/atiflash_linux
 
 mkdir ~/rom_backup && cd ~/rom_backup
 
-gpu_adapters=sudo atiflash -i
+gpu_adapters=`sudo atiflash -i`
 
-gpu_count=echo "$gpu_adapters" | wc -l
+gpu_count=`echo "$gpu_adapters" | wc -l`
+
+echo "GPU count: $gpu_count"
 
 for (( i=0; i<=$gpu_count; i++ ))
 do  
