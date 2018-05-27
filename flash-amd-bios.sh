@@ -1,6 +1,15 @@
 wget https://github.com/d13g0s0uz4/atiflash/releases/download/0.1/atiflash_linux.tar.xz -O /tmp/atiflash_linux.tar.xz && sudo tar xvf /tmp/atiflash_linux.tar.xz -C /usr/local/bin/
 
-mkdir rom_backup && cd rom_backup
+mkdir ~/rom_backup && cd ~/rom_backup
+
+gpu_adapters=sudo atiflash -i
+
+gpu_count=echo "$gpu_adapters" | wc -l
+
+for (( i=0; i<=$gpu_count; i++ ))
+do  
+   sudo atiflash -s $i gpu.$i.$HOSTNAME.rom
+done
 
 sudo atiflash -s 0 gpu.0.mx1as021.rx570.rom
 sudo atiflash -s 1 gpu.1.mx1as021.rx570.rom
