@@ -24,6 +24,7 @@ sudo atiflash -s 5 gpu.5.mx1as021.rx570.rom
 
 #scp back the modded bios and flash the amd bios
 
+
 sudo atiflash -p 0 mod.gpu.0.mx1as021.rx570.rom
 sudo atiflash -p 1 mod.gpu.1.mx1as021.rx570.rom
 sudo atiflash -p 2 mod.gpu.2.mx1as021.rx570.rom
