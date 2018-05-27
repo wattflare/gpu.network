@@ -13,5 +13,5 @@ Note: AMD_APP SDK license agreement needs to accepted manually.
 
 or
 
-`./install.rig.amd.ubuntu16.04.sh -biosEx` Export AMD GPU Bios and scp to BIOS repository for moding.
+`./install.rig.amd.ubuntu16.04.sh -biosEx` to export amd gpu bios/rom and scp to BIOS repository for moding.
 
