@@ -4,6 +4,8 @@
 
 gpu_adapters=`sudo atiflash -i`
 
+echo "gpu_adapters: $gpu_adapters"
+
 gpu_count=`echo "$gpu_adapters" | wc -l`
 
 echo "GPU count: $gpu_count"
