@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#RUN THIS FILE AS ROOT, SUDO WILL NOT WORK FOR
+#echo manual > /sys/class/drm/card$gpuid/device/power_dpm_force_performance_level
+#
+#
 # RX570 reference DPM states (0:300, 1:588, 2:952, 3:1041, 4:1106, 5:1168, 6:1209, 7:1244)
 # for the desired core_clock choose dpm_state close to reference value, e.g. 1100MHz->4, 1150MHz->5
 core_clock=1100
