@@ -4,7 +4,6 @@
 # for the desired core_clock choose dpm_state close to reference value, e.g. 1100MHz->4, 1150MHz->5
 core_clock=1100
 dpm_state=4
-# mem_clocks=(2000 2000 2000 2000 2000 2000 2000 2000)
 mem_clocks=(2000 2000 2000 2000 2000 2000)
 # set core/mem states from DPM state 4 upwards to $core_clock
 for gpuid in ${!mem_clocks[*]}; do
