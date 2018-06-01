@@ -5,7 +5,7 @@
 core_clock=1100
 dpm_state=4
 # mem_clocks=(2000 2000 2000 2000 2000 2000 2000 2000)
-mem_clocks=(2000 2000 1975 2000 2000 2000 2000)
+mem_clocks=(2000 2000 2000 2000 2000 2000)
 # set core/mem states from DPM state 4 upwards to $core_clock
 for gpuid in ${!mem_clocks[*]}; do
 echo "Setting up CoreStates and MemClocks GPU$gpuid"
@@ -17,7 +17,7 @@ echo $dpm_state > /sys/class/drm/card$gpuid/device/pp_dpm_sclk
 done
 
 # vddc_voltages; start from 800mV, increase if
-vddc_voltages=(800 800 800 800 800 800 800)
+vddc_voltages=(800 800 800 800 800 800)
 # set all voltage states from 1 upwards to xxx mV:
 for gpuid in ${!vddc_voltages[*]}; do
 echo "Setting up VDDC Voltage GPU$gpuid"
@@ -27,7 +27,7 @@ done
 done
 
 # vddci_voltages; should work @800mV for all GPU
-vddci_voltages=(800 800 800 800 800 800 800)
+vddci_voltages=(800 800 800 800 800 800)
 # set VDDCI voltages to xxx mV:
 for gpuid in ${!vddci_voltages[*]}; do
 echo "Setting up VDDC Voltage GPU$gpuid"
