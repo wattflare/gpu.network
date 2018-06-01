@@ -10,7 +10,7 @@ mem_clocks=(2000 2000 1975 2000 2000 2000 2000)
 for gpuid in ${!mem_clocks[*]}; do
 echo "Setting up CoreStates and MemClocks GPU$gpuid"
 for corestate in `seq $dpm_state 7`; do
-./wolfamdctrl -i $gpuid --core-state $corestate --core-clock $core_clock --mem-state 2 --mem-clock ${mem_clocks[$gpuid]}
+./ohgodatool -i $gpuid --core-state $corestate --core-clock $core_clock --mem-state 2 --mem-clock ${mem_clocks[$gpuid]}
 done
 echo manual > /sys/class/drm/card$gpuid/device/power_dpm_force_performance_level
 echo $dpm_state > /sys/class/drm/card$gpuid/device/pp_dpm_sclk
@@ -22,7 +22,7 @@ vddc_voltages=(800 800 800 800 800 800 800)
 for gpuid in ${!vddc_voltages[*]}; do
 echo "Setting up VDDC Voltage GPU$gpuid"
 for voltstate in {1..15}; do
-./wolfamdctrl -i $gpuid --volt-state $voltstate --vddc-table-set ${vddc_voltages[$gpuid]}
+./ohgodatool -i $gpuid --volt-state $voltstate --vddc-table-set ${vddc_voltages[$gpuid]}
 done
 done
 
@@ -32,6 +32,6 @@ vddci_voltages=(800 800 800 800 800 800 800)
 for gpuid in ${!vddci_voltages[*]}; do
 echo "Setting up VDDC Voltage GPU$gpuid"
 for memstate in {1..2}; do
-./wolfamdctrl -i $gpuid --mem-state $memstate --vddci ${vddci_voltages[$gpuid]}
+./ohgodatool -i $gpuid --mem-state $memstate --vddci ${vddci_voltages[$gpuid]}
 done
 done
