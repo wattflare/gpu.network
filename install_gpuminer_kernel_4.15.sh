@@ -12,11 +12,13 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/linux-image-4.15.0-0415
 
 sudo dpkg -i *.deb
 
+mkdir -p ~/wtf_miners && cd ~/wtf_miners
+
 git clone https://github.com/OhGodACompany/OhGodATool.git
 cd OhGodATool
 make
-cd ..
 
+cd ..
 git clone -b krussell/fixes --single-branch https://github.com/RadeonOpenCompute/ROC-smi.git
 
 
