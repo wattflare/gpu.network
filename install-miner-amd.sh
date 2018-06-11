@@ -23,7 +23,7 @@ current_user=$USER
 current_dir=$PWD
 miners_dir="$HOME/wtf_miners"
 
-mkdir $miners_dir && cd $miners_dir 
+mkdir -p $miners_dir && cd $miners_dir 
 git clone https://github.com/wattflare/claymore-zcash.git
 
 #libcurl.so.4 needed for claymore
