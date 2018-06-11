@@ -69,7 +69,7 @@ sudo miners_dir=$miners_dir current_user=$current_user su -c "./add-miner-servic
 #echo "Starting runminer service..."
 #sudo su -c "service runminer start"
 echo "Congratutaions! wattflare AMD miners installation was sucessfull!"
-echo "Rebooting rig... Mining will start automatically. After reboot type \"screen -r miner\" to view miner activity"
-sudo sleep 5
-sudo reboot
+#echo "Rebooting rig... Mining will start automatically. After reboot type \"screen -r miner\" to view miner activity"
+#sudo sleep 5
+#sudo reboot
 
