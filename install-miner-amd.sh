@@ -30,6 +30,12 @@ git clone https://github.com/wattflare/claymore-zcash.git
 sudo apt update
 sudo apt install libcurl4-openssl-dev -y
 git clone https://github.com/wattflare/claymore-eth.git
+
+#OpenCL needed for ethminer
+sudo apt-get install mesa-common-dev
+mkdir -p ethminer && cd ethminer
+wget https://github.com/ethereum-mining/ethminer/releases/download/v0.14.0/ethminer-0.14.0-Linux.tar.gz && tar xvzf ethminer-0.14.0-Linux.tar.gz
+
 cd $current_dir
 
 #create coin mining scripts
