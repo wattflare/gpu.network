@@ -1,4 +1,4 @@
-COIN_ENABLED=${COIN_ENABLED:-"music"}
+COIN_ENABLED=${COIN_ENABLED:-"etc"}
 #equihash
 VOT_ADDR=${VOT_ADDR:-"t1ZKv84aTkcT1kvnMiY49oUgFS72Xm8jHae"}
 ZCL_ADDR=${ZCL_ADDR:-"t1MDmBLNnHao3CSL57NU41fwRKEsN4V9PyX"}
@@ -8,6 +8,7 @@ BTCZ_ADDR=${BTCZ_ADDR:-"t1Yc53Y7Sm96bxdmV9yC2tgEQNaHDC6T4SD"}
 #ethash
 MUSIC_ADDR=${MUSIC_ADDR:-"0x0aedeb18ed2170318b07250bf5e525dfa19104d1"}
 ETH_ADDR=${ETH_ADDR:-"0x696da6e27638bedefa280071ba692427dca95a0e"}
+ETC_ADDR=${ETH_ADDR:-"0x087db2890fb62ecbbf9066cbd607c9e115f3b7ee"}
 
 #equihash
 VOT_POOL="165.227.12.162:8034"
@@ -18,6 +19,7 @@ BTCZ_POOL="165.227.12.162:5034"
 #ethash
 MUSIC_POOL="stratum+tcp://music.gpu.network:8008"
 ETH_POOL="stratum+tcp://eth.gpu.network:9009"
+ETC_POOL="stratum+tcp://etc.miningpool.io:7008"
 
 current_user=$USER
 current_dir=$PWD
@@ -52,8 +54,9 @@ echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $BTCZ_POOL  -zwal $BTCZ_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.btcz.pool.wattflare.com.sh
 
 #ethash
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $MUSIC_POOL -eworker $HOSTNAME -ewal $MUSIC_ADDR -epsw x" > $miners_dir/mine.music.pool.wattflare.com.sh -allpools 1
+echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $MUSIC_POOL -eworker $HOSTNAME -ewal $MUSIC_ADDR -epsw x -allpools 1" > $miners_dir/mine.music.pool.wattflare.com.sh 
 echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETH_POOL -eworker $HOSTNAME -ewal $ETH_ADDR -epsw x" > $miners_dir/mine.eth.pool.wattflare.com.sh
+echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETC_POOL -eworker $HOSTNAME -ewal $ETC_ADDR -epsw x -allpools 1" > $miners_dir/mine.etc.pool.wattflare.com.sh
 
 #make mining scripts executable
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
