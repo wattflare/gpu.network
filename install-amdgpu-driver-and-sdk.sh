@@ -2,7 +2,11 @@ sudo apt-get update \
 && sudo apt-get upgrade -y \
 && sudo apt-get dist-upgrade -y
 
-wget --referer=http://support.amd.com https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz \
+#wget --referer=http://support.amd.com https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz \
+#&& tar xvf amdgpu-pro-17.40-492261.tar.xz \
+#&& amdgpu-pro-17.40-492261/amdgpu-pro-install -y
+
+wget --referer=http://support.amd.com https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-18.20-606296.tar.xz \
 && tar xvf amdgpu-pro-17.40-492261.tar.xz \
 && amdgpu-pro-17.40-492261/amdgpu-pro-install -y
 
