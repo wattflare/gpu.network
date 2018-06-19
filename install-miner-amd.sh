@@ -8,8 +8,8 @@ BTCZ_ADDR=${BTCZ_ADDR:-"t1Yc53Y7Sm96bxdmV9yC2tgEQNaHDC6T4SD"}
 #ethash
 MUSIC_ADDR=${MUSIC_ADDR:-"0x0aedeb18ed2170318b07250bf5e525dfa19104d1"}
 ETH_ADDR=${ETH_ADDR:-"0x696da6e27638bedefa280071ba692427dca95a0e"}
-ETC_ADDR=${ETC_ADDR:-"0xc89c6c37a31629cb9123f2db7b7c9e85f5275cd1"}
-#ETC_ADDR=${ETC_ADDR:-"0x087db2890fb62ecbbf9066cbd607c9e115f3b7ee"}
+#ETC_ADDR=${ETC_ADDR:-"0xc89c6c37a31629cb9123f2db7b7c9e85f5275cd1"}
+ETC_ADDR=${ETC_ADDR:-"0x087db2890fb62ecbbf9066cbd607c9e115f3b7ee"}
 
 #equihash
 VOT_POOL="165.227.12.162:8034"
@@ -36,7 +36,7 @@ sudo apt install libcurl4-openssl-dev -y
 git clone https://github.com/wattflare/claymore-eth.git
 
 #OpenCL needed for ethminer
-sudo apt-get install mesa-common-dev
+sudo apt-get install mesa-common-dev -y
 mkdir -p ethminer && cd ethminer
 wget https://github.com/ethereum-mining/ethminer/releases/download/v0.14.0/ethminer-0.14.0-Linux.tar.gz && tar xvzf ethminer-0.14.0-Linux.tar.gz
 
