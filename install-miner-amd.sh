@@ -17,10 +17,10 @@ ZEN_POOL="165.227.12.162:4034"
 HUSH_POOL="165.227.12.162:7034"
 BTCZ_POOL="165.227.12.162:5034"
 #ethash
-MUSIC_POOL="stratum+tcp://music.gpu.network:8008"
-ETH_POOL="stratum+tcp://eth.gpu.network:9009"
-ETC_POOL="stratum+tcp://etc.miningpool.io:7008"
-ETC_POOL_ETHMINER="etc.miningpool.io:7008"
+MUSIC_POOL="music.miningpool.io:8008"
+ETH_POOL="etc.miningpool.io:9009"
+ETC_POOL="etc.miningpool.io:7008"
+
 
 current_user=$USER
 current_dir=$PWD
@@ -55,12 +55,9 @@ echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $BTCZ_POOL  -zwal $BTCZ_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.btcz.pool.wattflare.com.sh
 
 #ethash
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $MUSIC_POOL -eworker $HOSTNAME -ewal $MUSIC_ADDR -epsw x -allpools 1" > $miners_dir/mine.music.pool.wattflare.com.sh 
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETH_POOL -eworker $HOSTNAME -ewal $ETH_ADDR -epsw x" > $miners_dir/mine.eth.pool.wattflare.com.sh
-echo "$miners_dir/claymore-eth/ethdcrminer64 -epool $ETC_POOL -eworker $HOSTNAME -ewal $ETC_ADDR -epsw x -allpools 1" > $miners_dir/mine.etc.pool.wattflare.com.sh
-
-echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETC_ADDR.$HOSTNAME@$ETC_POOL_ETHMINER" > $miners_dir/ethminer.mine.etc.pool.wattflare.com.sh
-#/ethminer/bin/ethminer -G -P stratum1+tcp://0x087db2890fb62ecbbf9066cbd607c9e115f3b7ee.mx1ad002@etc.miningpool.io:7008
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$MUSIC_ADDR.$HOSTNAME@$MUSIC_POOL" > $miners_dir/mine.music.pool.wattflare.com.sh 
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETH_ADDR.$HOSTNAME@$ETH_POOL" > $miners_dir/mine.eth.pool.wattflare.com.sh
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETC_ADDR.$HOSTNAME@$ETC_POOL" > $miners_dir/mine.etc.pool.wattflare.com.sh
 
 #make mining scripts executable
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
