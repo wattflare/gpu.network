@@ -96,4 +96,5 @@ echo "Congratutaions! wattflare AMD miners installation was sucessfull!"
 #echo "Rebooting rig... Mining will start automatically. After reboot type \"screen -r miner\" to view miner activity"
 #sudo sleep 5
 #sudo reboot
-
+echo "sudo vi /etc/default/grub"
+echo "amdgpu.vm_fragment_size=9 pci=noaer"
