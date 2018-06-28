@@ -98,3 +98,4 @@ echo "Congratutaions! wattflare AMD miners installation was sucessfull!"
 #sudo reboot
 echo "sudo vi /etc/default/grub"
 echo "amdgpu.vm_fragment_size=9 pci=noaer"
+echo "sudo update-grub"
