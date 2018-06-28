@@ -32,7 +32,7 @@ HUSH_POOL="165.227.12.162:7034"
 BTCZ_POOL="165.227.12.162:5034"
 #ethash
 MUSIC_POOL="music.miningpool.io:8008"
-ETH_POOL="etc.miningpool.io:9009"
+ETH_POOL="eth.miningpool.io:9009"
 ETC_POOL="etc.miningpool.io:7008"
 
 
