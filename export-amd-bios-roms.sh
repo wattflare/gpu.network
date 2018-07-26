@@ -1,6 +1,6 @@
 wget https://github.com/wattflare/atiflash/files/2092746/atiflash.tar.gz -O /tmp/atiflash_linux.tar.xz && sudo tar xvf /tmp/atiflash_linux.tar.xz -C /usr/local/bin/
 
-mkdir -p ~/wtf_miners/rom_backup && cd ~/wtf_miners/rom_backup
+mkdir -p ~/rom_backup && cd ~/rom_backup
 
 gpu_adapters=`lspci | grep VGA`
 
