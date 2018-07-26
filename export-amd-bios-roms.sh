@@ -15,8 +15,5 @@ do
    sudo atiflash -s $i gpu.$i.$HOSTNAME.rom
 done
 
-mkdir -p ~/rom_backup
-cp -i gpu.*.$HOSTNAME.rom ~/rom_backup
-
 #scp *.rom snj@192.168.1.XX:/home/pooladmin/rom_backups
 
