@@ -9,7 +9,7 @@ BTCZ_ADDR=${BTCZ_ADDR:-"t1Yc53Y7Sm96bxdmV9yC2tgEQNaHDC6T4SD"}
 MUSIC_ADDR=${MUSIC_ADDR:-"0x0aedeb18ed2170318b07250bf5e525dfa19104d1"}
 #ETH_ADDR=${ETH_ADDR:-"0x696da6e27638bedefa280071ba692427dca95a0e"}
 #snj
-ETC_ADDR=${ETC_ADDR:-"0xc89c6c37a31629cb9123f2db7b7c9e85f5275cd1"}
+ETC_ADDR=${ETC_ADDR:-"0x981ffe7fd050ef04772f9d53322b6f84a57812f8"}
 #drb
 #ETC_ADDR=${ETC_ADDR:-"0x087db2890fb62ecbbf9066cbd607c9e115f3b7ee"}
 #zsn
@@ -51,7 +51,7 @@ git clone https://github.com/wattflare/claymore-eth.git
 #OpenCL needed for ethminer
 sudo apt-get install mesa-common-dev -y
 mkdir -p ethminer && cd ethminer
-wget https://github.com/ethereum-mining/ethminer/releases/download/v0.14.0/ethminer-0.14.0-Linux.tar.gz && tar xvzf ethminer-0.14.0-Linux.tar.gz
+wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz && tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
 
 cd $current_dir
 
@@ -96,6 +96,7 @@ echo "Congratutaions! wattflare AMD miners installation was sucessfull!"
 #echo "Rebooting rig... Mining will start automatically. After reboot type \"screen -r miner\" to view miner activity"
 #sudo sleep 5
 #sudo reboot
+echo "Update GRUB if you've not already updated"
 echo "sudo vi /etc/default/grub"
 echo "amdgpu.vm_fragment_size=9 pci=noaer"
 echo "sudo update-grub"
