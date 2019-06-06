@@ -53,7 +53,7 @@ git clone https://github.com/wattflare/claymore-eth.git
 #OpenCL needed for ethminer
 sudo apt-get install mesa-common-dev -y
 mkdir -p ethminer && cd ethminer
-wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz && tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
+wget https://github.com/ethereum-mining/ethminer/releases/download/v0.17.1/ethminer-0.17.1-linux-x86_64.tar.gz && tar xvzf ethminer-0.17.1-linux-x86_64.tar.gz
 
 cd $current_dir
 
@@ -84,10 +84,10 @@ echo "export GPU_MAX_HEAP_SIZE=100" > $miners_dir/.runminer
 echo "export GPU_USE_SYNC_OBJECTS=1" >> $miners_dir/.runminer
 echo "export GPU_MAX_ALLOC_PERCENT=100" >> $miners_dir/.runminer
 echo "export GPU_SINGLE_ALLOC_PERCENT=100" >> $miners_dir/.runminer
-echo "$miners_dir/mine.$COIN_ENABLED.pool.wattflare.com.sh" >> $miners_dir/.runminer
 
+echo "$miners_dir/mine.$COIN_ENABLED.pool.wattflare.com.sh" >> $miners_dir/.runminer
 #make .runminer executsable
-chmod +x $miners_dir/.runminer 
+chmod +x $miners_dir/.runminer
 
 #setup miner as start-up service
 sudo miners_dir=$miners_dir current_user=$current_user su -c "./add-miner-service.sh"
