@@ -35,7 +35,7 @@ BTCZ_POOL="165.227.12.162:5034"
 NICEHASH_POOL="daggerhashimoto.usa.nicehash.com:3353"
 MUSIC_POOL="music.miningpool.io:8008"
 ETH_POOL="eth.miningpool.io:9009"
-ETC_POOL="etc.miningpool.io:7008"
+ETC_POOL="165.227.12.162:7008"
 #ETC_POOL="us1-etc.ethermine.org:4444"
 
 current_user=$USER
