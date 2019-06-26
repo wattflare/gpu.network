@@ -71,10 +71,10 @@ echo "$miners_dir/claymore-zcash/zecminer64 -zpool $HUSH_POOL  -zwal $HUSH_ADDR.
 echo "$miners_dir/claymore-zcash/zecminer64 -zpool $BTCZ_POOL  -zwal $BTCZ_ADDR.$HOSTNAME -zpsw x" > $miners_dir/mine.btcz.pool.wattflare.com.sh
 
 #ethash
-echo "$miners_dir/ethminer/bin/ethminer -G -P stratum2+tcp://$BTC_ADDR.$HOSTNAME@$NICEHASH_POOL" > $miners_dir/mine.btc.pool.wattflare.com.sh
-echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$MUSIC_ADDR.$HOSTNAME@$MUSIC_POOL" > $miners_dir/mine.music.pool.wattflare.com.sh 
-echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETH_ADDR.$HOSTNAME@$ETH_POOL" > $miners_dir/mine.eth.pool.wattflare.com.sh
-echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETC_ADDR.$HOSTNAME@$ETC_POOL" > $miners_dir/mine.etc.pool.wattflare.com.sh
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum2+tcp://$BTC_ADDR.$HOSTNAME@$NICEHASH_POOL --exit --api-bind 127.0.0.1:3333" > $miners_dir/mine.btc.pool.wattflare.com.sh
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$MUSIC_ADDR.$HOSTNAME@$MUSIC_POOL --exit --api-bind 127.0.0.1:3333" > $miners_dir/mine.music.pool.wattflare.com.sh 
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETH_ADDR.$HOSTNAME@$ETH_POOL --exit --api-bind 127.0.0.1:3333" > $miners_dir/mine.eth.pool.wattflare.com.sh
+echo "$miners_dir/ethminer/bin/ethminer -G -P stratum1+tcp://$ETC_ADDR.$HOSTNAME@$ETC_POOL --exit --api-bind 127.0.0.1:3333" > $miners_dir/mine.etc.pool.wattflare.com.sh
 
 #make mining scripts executable
 chmod +x $miners_dir/mine.*.pool.wattflare.com.sh
