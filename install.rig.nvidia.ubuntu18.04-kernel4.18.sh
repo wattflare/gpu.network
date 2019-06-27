@@ -41,20 +41,11 @@
    41  sudo apt-get update
    42  sudo apt-get install cuda
    43  sudo reboot
-   44  screen -r
-   45  nvidia-smi
-   46  cd wtf_miners/
-   47  ll
-   48  ./.runminer
-   49  cd ethminer/bin/
-   50  ll
-   51  ./ethminer --help
-   52  cd ..
-   53  ll
-   54  vi mine.btc.pool.wattflare.com.sh
-   55  ./.runminer
-   56  screen -S miner
-   57  screen -r
-   58  nvidia-
-   59  nvidia-smi
-   60  history
+   44  nvidia-smi -i 0 -pl 100
+   45  sudo nvidia-smi -i 0 -pl 100
+   46  sudo nvidia-smi -i 1 -pl 100
+   47  sudo nvidia-smi -i 1 -pl 115
+   48  sudo nvidia-smi -i 2 -pl 100
+   49  sudo nvidia-smi -i 3 -pl 100
+   50  sudo nvidia-smi -i 4 -pl 100
+   51  history
