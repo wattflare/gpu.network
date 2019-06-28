@@ -1,30 +1,13 @@
-    1  sudo apt-get update && sudo apt-get upgrade -y
-    2  cd /tmp/
-    3  wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-headers-4.18.0-041800_4.18.0-041800.201808122131_all.deb
-    4  wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-headers-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
-    5  wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-image-unsigned-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
-    6  wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-modules-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
-    7  sudo dpkg -i *.deb
-    8  sudo reboot
-    9  sudo apt update
-   10  apt list --upgradable
-   11  sudo apt-get purge linux-image-4.15.0-45-generic
-   12  sudo reboot
-   13  /sys/class/drm/card0/ll
-   14  ls
-   15  ls -al
-   16  cd /sys/class/drm/
-   17  ll
-   18  cd card0/
-   19  ll
-   20  cd device
-   21  ll
-   22  cd ..
-   23  cd ~
-   24  ll
-   25  git clone https://github.com/wattflare/gpu.network.git
-   26  cd gpu.network/
-   27  ll
+sudo apt-get update && sudo apt-get upgrade -y
+cd /tmp/
+wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-headers-4.18.0-041800_4.18.0-041800.201808122131_all.deb
+wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-headers-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
+wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-image-unsigned-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
+wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-modules-4.18.0-041800-generic_4.18.0-041800.201808122131_amd64.deb
+sudo dpkg -i *.deb
+
+sudo reboot
+
    28  ./install-miner-amd.sh
    29  cd ~/wtf_miners/
    30  ./.runminer
