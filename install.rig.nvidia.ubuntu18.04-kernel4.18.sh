@@ -7,7 +7,7 @@ wget -c http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.18/linux-modules-4.18.0
 sudo dpkg -i *.deb
 
 curl -O "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.168-1_amd64.deb"
-udo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt-get update
