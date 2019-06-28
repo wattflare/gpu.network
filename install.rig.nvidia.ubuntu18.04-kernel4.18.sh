@@ -11,7 +11,7 @@ sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt-get update
-sudo apt-get install cuda
+sudo apt-get install cuda -y
 sudo reboot
 sudo nvidia-smi -i 0 -pl 100
 sudo nvidia-smi -i 1 -pl 100
