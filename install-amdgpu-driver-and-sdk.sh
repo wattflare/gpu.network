@@ -1,6 +1,4 @@
-sudo apt-get update \
-&& sudo apt-get upgrade -y \
-&& sudo apt-get dist-upgrade -y
+sudo apt-get update
 
 wget --referer=http://support.amd.com https://drivers.amd.com/drivers/linux/amdgpu-pro-19.20-812932-ubuntu-18.04.tar.xz \
 && tar xvf amdgpu-pro-19.20-812932-ubuntu-18.04.tar.xz \
